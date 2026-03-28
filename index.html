@@ -35,7 +35,10 @@
       </nav>
 
       <div class="nav-actions">
-        <a class="lang-button" href="#english" aria-label="Ir a la sección en inglés">EN</a>
+        <div class="lang-switch" aria-label="Selector de idioma">
+          <button class="lang-toggle active" type="button" data-lang="es" aria-pressed="true">ES</button>
+          <button class="lang-toggle" type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
         <a class="nav-cta" href="#coleccion-destacada">Ver serie destacada</a>
       </div>
     </header>
@@ -43,7 +46,7 @@
     <main>
       <section class="hero section" id="inicio">
         <div class="hero-copy">
-          <p class="eyebrow">From clay to code</p>
+          <p class="eyebrow">Del barro al código</p>
           <h1>Marbella en las manos, siempre contigo.</h1>
           <p class="hero-intro">
             AlfarerIA NLP nace de unir la alfarería con la IA para crear piezas cerámicas con
@@ -238,10 +241,7 @@
             <button
               class="thumb-button"
               type="button"
-              data-image="./assets/la-concha-bahia.png"
-              data-kicker="La Concha Sunset Series"
-              data-title="Atardecer en la bahía"
-              data-text="Una taza que recoge la calma del Mediterráneo y la convierte en un pequeño ritual diario."
+              data-key="bahia"
             >
               <img src="./assets/la-concha-bahia.png" alt="Vista de Atardecer en la bahía">
             </button>
@@ -249,10 +249,7 @@
             <button
               class="thumb-button"
               type="button"
-              data-image="./assets/la-concha-torno.png"
-              data-kicker="Pieza en proceso"
-              data-title="La montaña sobre el torno"
-              data-text="El paisaje mediterráneo se funde con el gesto artesanal y recuerda de dónde viene cada forma."
+              data-key="torno"
             >
               <img src="./assets/la-concha-torno.png" alt="Taza en torno inspirada en La Concha">
             </button>
@@ -260,10 +257,7 @@
             <button
               class="thumb-button"
               type="button"
-              data-image="./assets/la-concha-mar.png"
-              data-kicker="Serie destacada"
-              data-title="Mar esmeralda"
-              data-text="Turquesas luminosos, aire salino y la sensación de tener la costa a un sorbo de distancia."
+              data-key="mar"
             >
               <img src="./assets/la-concha-mar.png" alt="Taza con mar esmeralda y La Concha">
             </button>
@@ -271,10 +265,7 @@
             <button
               class="thumb-button"
               type="button"
-              data-image="./assets/la-concha-costa.png"
-              data-kicker="Lectura serena"
-              data-title="Costa en calma"
-              data-text="Una versión limpia y suave que deja respirar la orilla, la curva de la bahía y la luz del final del día."
+              data-key="costa"
             >
               <img src="./assets/la-concha-costa.png" alt="Taza con vista de la costa de Marbella">
             </button>
@@ -282,10 +273,7 @@
             <button
               class="thumb-button active"
               type="button"
-              data-image="./assets/la-concha-artistica.png"
-              data-kicker="Interpretación pictórica"
-              data-title="Pinceladas de Marbella"
-              data-text="Una pieza más libre, con textura de recuerdo pintado y una mirada casi ilustrada sobre la costa."
+              data-key="artistica"
             >
               <img src="./assets/la-concha-artistica.png" alt="Pieza artística inspirada en Marbella">
             </button>
@@ -323,48 +311,6 @@
             <h3>Esmalte con memoria</h3>
             <p>El acabado final busca que la pieza no solo sea bonita, sino que evoque lugar y pertenencia.</p>
           </article>
-        </div>
-      </section>
-
-      <section class="translation section" id="english">
-        <div class="section-heading split">
-          <div>
-            <p class="eyebrow">English version</p>
-            <h2>Handmade ceramics shaped by memory, sea light and AI-assisted sketching.</h2>
-          </div>
-          <p class="section-note">
-            A short English overview for visitors who want to understand the project, the inspiration
-            behind the collections and the spirit of La Concha Sunset Series.
-          </p>
-        </div>
-
-        <div class="translation-card">
-          <div class="translation-copy">
-            <p>
-              AlfarerIA NLP brings together wheel-thrown ceramics and artificial intelligence to create
-              pieces inspired by Marbella, the Mediterranean Sea and the silhouette of La Concha.
-            </p>
-            <p>
-              Every object starts with real clay, grows through visual exploration and returns to the
-              studio to become a handmade piece with warmth, texture and a strong sense of place.
-            </p>
-          </div>
-
-          <div class="translation-grid">
-            <article>
-              <h3>Collections</h3>
-              <p><strong>Andalusia:</strong> warm light, whitewashed references, sea, mountains and southern identity.</p>
-              <p><strong>Sea:</strong> turquoise reflections, shoreline textures and calm daily rituals.</p>
-              <p><strong>La Concha Sunset Series:</strong> sunset skies, emerald water and Marbella always close to your hands.</p>
-            </article>
-
-            <article>
-              <h3>Signature line</h3>
-              <p><strong>Slogan:</strong> "Marbella in your hands, always with you."</p>
-              <p><strong>Feeling:</strong> relaxed, close and proud of home.</p>
-              <p><strong>Craft:</strong> one handmade piece at a time.</p>
-            </article>
-          </div>
         </div>
       </section>
 
