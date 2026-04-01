@@ -152,7 +152,7 @@ const pageTranslations = {
         cards: [
           {
             tag: "Process",
-            title: "How an idea moves from briefing to kiln",
+            title: "How an idea moves from desired product definition to kiln",
             text: "A page focused on stages, workshop decisions and the tools that support each phase."
           },
           {
