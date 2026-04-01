@@ -25,6 +25,7 @@ const ui = {
   quoteSignoff: document.querySelector(".quote-signoff"),
   canvasEyebrow: document.querySelector("#modelo .eyebrow"),
   canvasTitle: document.querySelector("#modelo h2"),
+  canvasNote: document.querySelector("#modelo .section-note"),
   canvasCards: [...document.querySelectorAll(".canvas-card")],
   collectionsEyebrow: document.querySelector("#colecciones .eyebrow"),
   collectionsTitle: document.querySelector("#colecciones .section-heading h2"),
@@ -39,11 +40,16 @@ const ui = {
   spotlightText: document.getElementById("spotlight-text"),
   processEyebrow: document.querySelector("#proceso .eyebrow"),
   processTitle: document.querySelector("#proceso h2"),
+  processNote: document.querySelector("#proceso .section-note"),
   processCards: [...document.querySelectorAll(".process-card")],
   platformEyebrow: document.querySelector("#plataforma .eyebrow"),
   platformTitle: document.querySelector("#plataforma h2"),
   platformNote: document.querySelector("#plataforma .section-note"),
   featureCards: [...document.querySelectorAll(".feature-card")],
+  useCasesEyebrow: document.querySelector("#casos .eyebrow"),
+  useCasesTitle: document.querySelector("#casos h2"),
+  useCasesNote: document.querySelector("#casos .section-note"),
+  useCaseCards: [...document.querySelectorAll(".use-case-card")],
   ctaEyebrow: document.querySelector(".cta-card .eyebrow"),
   ctaTitle: document.querySelector(".cta-card h2"),
   ctaText: document.querySelector(".cta-card p:not(.eyebrow)"),
@@ -138,7 +144,7 @@ const translations = {
     brandSubtitle: "Alfarería tradicional, IA, impresión 3D y plataforma digital",
     navAriaLabel: "Principal",
     langSwitchAriaLabel: "Selector de idioma",
-    navLinks: ["Modelo", "Proceso", "Plataforma", "Colección"],
+    navLinks: ["Propuesta", "Proceso", "Plataforma", "Colección"],
     navCta: "Ver funcionalidades",
     hero: {
       eyebrow: "Del barro al código",
@@ -168,28 +174,29 @@ const translations = {
       signoff: "Visión del modelo"
     },
     canvas: {
-      eyebrow: "Modelo de negocio",
-      title: "Cuatro palancas para convertir el taller en un sistema más escalable.",
+      eyebrow: "La propuesta",
+      title: "Una marca artesanal que también opera como plataforma creativa y técnica.",
+      note: "AlfarerIA no se limita a vender piezas: conecta diseño participativo, producción inteligente, formación y herramientas digitales en una experiencia más escalable.",
       cards: [
         {
-          tag: "Clientes",
-          title: "Aficionados, estudios y profesionales",
-          text: "Se diferencia entre quien quiere una pieza personalizada, quien necesita herramientas de producción y quien busca soporte técnico o formación."
+          tag: "Experiencia",
+          title: "El cliente participa desde el primer boceto",
+          text: "La web permite describir una idea, subir imágenes de referencia o conversar con un asistente para transformar inspiración en una propuesta visual clara."
         },
         {
-          tag: "Valor",
-          title: "Menos error, más personalización",
-          text: "La IA ayuda a predecir, ajustar y diseñar; la impresión 3D acelera el prototipado; la artesanía aporta acabado, criterio y autenticidad."
+          tag: "Producción",
+          title: "Tecnología para decidir mejor antes de fabricar",
+          text: "La IA ayuda a anticipar contracción, documentar esmaltes y optimizar materiales, mientras la impresión 3D acelera moldes, útiles y prototipos."
         },
         {
-          tag: "Canales",
-          title: "Web, chatbot y contenido educativo",
-          text: "El negocio no depende solo del encargo presencial: también se apoya en una plataforma digital, tutoriales, automatización web y soporte remoto."
+          tag: "Servicios",
+          title: "Herramientas que también pueden ayudar a otros ceramistas",
+          text: "Más allá de la venta final, el proyecto abre la puerta a asistentes técnicos, recursos de laboratorio y soluciones digitales para talleres, escuelas y profesionales."
         },
         {
-          tag: "Ingresos",
-          title: "Producto, servicio y SaaS",
-          text: "Venta de piezas, producción personalizada, herramientas para ceramistas, formación y funcionalidades digitales de autoservicio."
+          tag: "Comunidad",
+          title: "Contenido, soporte y aprendizaje continuo",
+          text: "La parte digital también acompaña después de la compra o del encargo, con tutoriales, comunidad, automatizaciones y una relación más cercana con cada perfil de usuario."
         }
       ]
     },
@@ -256,6 +263,7 @@ const translations = {
     process: {
       eyebrow: "Proceso creativo",
       title: "Del briefing al horno, con IA y fabricación digital acompañando cada fase.",
+      note: "Cada etapa combina una decisión artesanal con una capa tecnológica concreta para reducir errores, acelerar iteraciones y mantener la pieza final bajo control.",
       cards: [
         {
           title: "Brief del cliente",
@@ -285,75 +293,112 @@ const translations = {
     },
     platform: {
       eyebrow: "Plataforma digital",
-      title: "Ejemplos de funcionalidades alineadas con el modelo de negocio.",
-      note: "Estas secciones no solo ilustran una web comercial, sino una posible plataforma producto-servicio para clientes finales y para otros ceramistas.",
+      title: "Funcionalidades ejemplo para convertir la idea en producto, servicio y plataforma.",
+      note: "Estas piezas de interfaz ayudan a imaginar cómo AlfarerIA podría atender a clientes finales, profesionales y comunidad desde un mismo entorno digital.",
       cards: [
         {
           tag: "Self-service",
-          title: "Diseña tu pieza",
-          text: "Sube una foto, elige referencias o describe la idea al chatbot y recibe un prototipo visual antes de producir.",
+          title: "Configurador visual con IA",
+          text: "Un espacio para subir una imagen, describir una pieza o mezclar referencias y recibir propuestas visuales antes de pasar al taller.",
           points: [
-            "Entrada por imagen o texto",
-            "Variantes visuales automáticas",
-            "Pedido validado antes del taller"
+            "Entrada por imagen, texto o estilo",
+            "Versiones alternativas en segundos",
+            "Validación visual antes de producir"
+          ]
+        },
+        {
+          tag: "Asistencia",
+          title: "Chatbot de co-creación y soporte",
+          text: "El usuario puede conversar con un asistente para aterrizar una idea, resolver dudas de compra o recibir orientación técnica según su perfil.",
+          points: [
+            "Brief guiado paso a paso",
+            "Soporte para aficionados y profesionales",
+            "Atención automatizada y continua"
           ]
         },
         {
           tag: "IA aplicada",
           title: "Predictor de contracción",
-          text: "Una herramienta que ayuda a estimar deformaciones y porcentajes de merma según pasta, espesor y curva de cocción.",
+          text: "Una herramienta técnica para estimar deformaciones y ajustar medidas según pasta, espesor y curva de cocción antes de fabricar.",
           points: [
             "Menos errores en horno",
-            "Mejor ajuste de medidas",
-            "Utilidad para producción propia o SaaS"
+            "Mejor ajuste dimensional",
+            "Valor útil también como servicio"
           ]
         },
         {
           tag: "I+D cerámico",
-          title: "Optimizador de esmaltes",
-          text: "Asistente para probar combinaciones, documentar resultados y acelerar iteraciones de laboratorio.",
+          title: "Biblioteca viva de esmaltes",
+          text: "Un sistema para registrar pruebas, comparar resultados y sugerir ajustes en color, textura o compatibilidad entre materiales.",
           points: [
-            "Comparación de recetas",
-            "Historial de pruebas",
-            "Recomendaciones de ajuste"
-          ]
-        },
-        {
-          tag: "Sostenibilidad",
-          title: "Uso inteligente de materiales",
-          text: "Panel para maximizar el aprovechamiento de barros y esmaltes, reducir sobrantes y facilitar su reciclaje.",
-          points: [
-            "Consumo estimado por pieza",
-            "Alertas de desperdicio",
-            "Reciclaje y reaprovechamiento"
+            "Historial de recetas y resultados",
+            "Aprendizaje acumulado del taller",
+            "Menos ensayo ciego y menos desperdicio"
           ]
         },
         {
           tag: "Fabricación digital",
-          title: "Centro de moldes y herramientas 3D",
-          text: "Espacio para generar prototipos, utillajes y moldes rápidamente, mejorando productividad y repetibilidad.",
+          title: "Centro 3D para moldes y útiles",
+          text: "Zona pensada para generar moldes, soportes y prototipos con rapidez, facilitando producción bajo demanda y personalización repetible.",
           points: [
             "Series cortas más viables",
-            "Personalización reproducible",
-            "Soporte para producción profesional"
+            "Herramientas precisas para el taller",
+            "Puente entre artesanía y fabricación digital"
           ]
         },
         {
           tag: "Comunidad",
-          title: "Tutoriales, soporte y automatización",
-          text: "Una capa educativa y de acompañamiento con chatbot, contenidos y automatización de atención y generación de contenido.",
+          title: "Aula, comunidad y servicios pro",
+          text: "Una capa educativa con tutoriales, soporte, recursos para escuelas y servicios avanzados para ceramistas que necesitan más acompañamiento.",
           points: [
-            "Soporte a aficionados",
-            "Recursos para profesionales",
-            "Relación continua con la comunidad"
+            "Formación para perfiles distintos",
+            "Comunidad digital alrededor del proyecto",
+            "Servicios premium y relación a largo plazo"
+          ]
+        }
+      ]
+    },
+    useCases: {
+      eyebrow: "Escenarios de uso",
+      title: "Tres maneras de vivir AlfarerIA según quién entra en la plataforma.",
+      note: "La misma infraestructura puede servir para un encargo emocional, una necesidad técnica o una experiencia educativa más completa.",
+      cards: [
+        {
+          tag: "Cliente final",
+          title: "Quiero una pieza única para mí o para regalar",
+          text: "Subo una imagen, explico el ambiente que busco y veo un prototipo visual antes de aprobar la producción artesanal.",
+          points: [
+            "Diseño participativo sin conocimientos técnicos",
+            "Seguimiento más claro del encargo",
+            "Resultado personalizado y emocional"
+          ]
+        },
+        {
+          tag: "Profesional",
+          title: "Necesito herramientas para producir con más control",
+          text: "Utilizo predicción, documentación de esmaltes y recursos 3D para reducir pruebas fallidas y repetir series con mayor consistencia.",
+          points: [
+            "Datos útiles para decisiones de taller",
+            "Más productividad en series cortas",
+            "Servicios digitales con enfoque técnico"
+          ]
+        },
+        {
+          tag: "Escuela o taller",
+          title: "Quiero enseñar y experimentar con una capa digital",
+          text: "La plataforma acompaña clases, ejercicios y demostraciones con chatbot, tutoriales y ejemplos que acercan la innovación al aula.",
+          points: [
+            "Formación más visual e interactiva",
+            "Recursos para comunidad y aprendizaje",
+            "Puente entre tradición y nuevas tecnologías"
           ]
         }
       ]
     },
     cta: {
       eyebrow: "AlfarerIA",
-      title: "Una marca que puede vender piezas, prestar servicios y crecer como plataforma.",
-      text: "La colección física sigue siendo importante, pero ahora forma parte de un sistema más amplio: diseño participativo, automatización, herramientas para ceramistas y procesos más sostenibles.",
+      title: "Una propuesta que une objeto, servicio digital y conocimiento compartido.",
+      text: "La colección física sigue siendo importante, pero ahora forma parte de un sistema más amplio: co-diseño con clientes, herramientas para ceramistas, formación, automatización y una producción más consciente.",
       button: "Explorar el concepto completo"
     },
     footer: [
@@ -370,7 +415,7 @@ const translations = {
     brandSubtitle: "Traditional pottery, AI, 3D printing and digital platform",
     navAriaLabel: "Main navigation",
     langSwitchAriaLabel: "Language selector",
-    navLinks: ["Model", "Process", "Platform", "Collection"],
+    navLinks: ["Concept", "Process", "Platform", "Collection"],
     navCta: "View features",
     hero: {
       eyebrow: "From clay to code",
@@ -400,28 +445,29 @@ const translations = {
       signoff: "Business vision"
     },
     canvas: {
-      eyebrow: "Business model",
-      title: "Four levers that turn the workshop into a more scalable system.",
+      eyebrow: "The concept",
+      title: "A handmade brand that also operates as a creative and technical platform.",
+      note: "AlfarerIA is not limited to selling pieces: it connects participatory design, smart production, training and digital tools in a more scalable experience.",
       cards: [
         {
-          tag: "Customers",
-          title: "Hobbyists, studios and professionals",
-          text: "The model distinguishes between people who want a custom piece, those who need production tools and those who seek technical support or training."
+          tag: "Experience",
+          title: "The customer takes part from the very first sketch",
+          text: "The website lets people describe an idea, upload references or talk to an assistant to turn inspiration into a clear visual proposal."
         },
         {
-          tag: "Value",
-          title: "Less error, more customization",
-          text: "AI helps predict, adjust and design; 3D printing accelerates prototyping; craftsmanship adds finish, judgment and authenticity."
+          tag: "Production",
+          title: "Technology helps make better decisions before making",
+          text: "AI helps anticipate shrinkage, document glazes and optimize materials, while 3D printing speeds up molds, tools and prototypes."
         },
         {
-          tag: "Channels",
-          title: "Website, chatbot and educational content",
-          text: "The business does not rely only on in-person orders: it also depends on a digital platform, tutorials, website automation and remote support."
+          tag: "Services",
+          title: "Tools that can also support other ceramicists",
+          text: "Beyond final sales, the project can evolve into technical assistants, lab resources and digital solutions for studios, schools and professionals."
         },
         {
-          tag: "Revenue",
-          title: "Product, service and SaaS",
-          text: "Sales of physical pieces, custom production, tools for ceramicists, training and self-service digital features."
+          tag: "Community",
+          title: "Content, support and continuous learning",
+          text: "The digital layer continues after the purchase or commission through tutorials, community, automations and a closer relationship with each user profile."
         }
       ]
     },
@@ -488,6 +534,7 @@ const translations = {
     process: {
       eyebrow: "Creative process",
       title: "From briefing to kiln, with AI and digital fabrication supporting every stage.",
+      note: "Each step combines a handmade decision with a specific technological layer to reduce errors, speed up iteration and keep the final piece under control.",
       cards: [
         {
           title: "Client brief",
@@ -517,75 +564,112 @@ const translations = {
     },
     platform: {
       eyebrow: "Digital platform",
-      title: "Example features aligned with the business model.",
-      note: "These sections illustrate not only a commercial website, but also a possible product-service platform for end customers and other ceramicists.",
+      title: "Feature examples that turn the idea into product, service and platform.",
+      note: "These interface blocks help imagine how AlfarerIA could serve end customers, professionals and community from a shared digital environment.",
       cards: [
         {
           tag: "Self-service",
-          title: "Design your piece",
-          text: "Upload a photo, choose references or describe the idea to the chatbot and receive a visual prototype before production.",
+          title: "AI visual configurator",
+          text: "A space to upload an image, describe a piece or combine references and receive visual proposals before moving into production.",
           points: [
-            "Image or text-based input",
-            "Automatic visual variants",
-            "Order validated before workshop time"
+            "Image, text or style-based input",
+            "Alternative versions in seconds",
+            "Visual approval before making"
+          ]
+        },
+        {
+          tag: "Assistance",
+          title: "Co-creation and support chatbot",
+          text: "Users can talk to an assistant to shape an idea, solve buying questions or get technical guidance based on their profile.",
+          points: [
+            "Guided briefing step by step",
+            "Support for hobbyists and professionals",
+            "Continuous automated assistance"
           ]
         },
         {
           tag: "Applied AI",
           title: "Shrinkage predictor",
-          text: "A tool that helps estimate deformation and shrinkage percentages according to clay body, thickness and firing curve.",
+          text: "A technical tool to estimate deformation and adjust dimensions according to clay body, thickness and firing curve before production.",
           points: [
             "Fewer kiln errors",
-            "Better dimensional fit",
-            "Useful as internal tool or SaaS"
+            "Better dimensional control",
+            "Value as a service as well"
           ]
         },
         {
           tag: "Ceramic R&D",
-          title: "Glaze optimizer",
-          text: "An assistant to test combinations, document outcomes and accelerate laboratory iterations.",
+          title: "Living glaze library",
+          text: "A system to record tests, compare outcomes and suggest adjustments in color, texture or material compatibility.",
           points: [
-            "Recipe comparison",
-            "Test history",
-            "Adjustment recommendations"
-          ]
-        },
-        {
-          tag: "Sustainability",
-          title: "Smart material usage",
-          text: "A dashboard that maximizes clay and glaze usage, reduces leftovers and makes recycling easier.",
-          points: [
-            "Estimated consumption per piece",
-            "Waste alerts",
-            "Recycling and reuse support"
+            "Recipe and results history",
+            "Accumulated workshop learning",
+            "Less blind testing and less waste"
           ]
         },
         {
           tag: "Digital fabrication",
           title: "3D molds and tools hub",
-          text: "A space to generate prototypes, jigs and molds quickly, improving productivity and repeatability.",
+          text: "An area built to generate molds, supports and prototypes quickly, enabling on-demand production and repeatable customization.",
           points: [
             "Short runs become more viable",
-            "Repeatable customization",
-            "Support for professional production"
+            "Precise tools for the workshop",
+            "A bridge between craft and digital fabrication"
           ]
         },
         {
           tag: "Community",
-          title: "Tutorials, support and automation",
-          text: "An educational and support layer with chatbot assistance, content and automation for customer care and content generation.",
+          title: "Academy, community and pro services",
+          text: "An educational layer with tutorials, support, resources for schools and advanced services for ceramicists who need deeper guidance.",
           points: [
-            "Support for hobbyists",
-            "Resources for professionals",
-            "Ongoing relationship with the community"
+            "Training for different profiles",
+            "A digital community around the project",
+            "Premium services and long-term relationships"
+          ]
+        }
+      ]
+    },
+    useCases: {
+      eyebrow: "Use cases",
+      title: "Three different ways to experience AlfarerIA depending on who enters the platform.",
+      note: "The same infrastructure can support an emotional commission, a technical need or a fuller educational experience.",
+      cards: [
+        {
+          tag: "End customer",
+          title: "I want a unique piece for myself or as a gift",
+          text: "I upload an image, explain the atmosphere I want and see a visual prototype before approving handmade production.",
+          points: [
+            "Participatory design without technical knowledge",
+            "A clearer view of the commission",
+            "A personalized and emotional outcome"
+          ]
+        },
+        {
+          tag: "Professional",
+          title: "I need tools to produce with more control",
+          text: "I use prediction, glaze documentation and 3D resources to reduce failed tests and repeat short runs more consistently.",
+          points: [
+            "Useful data for workshop decisions",
+            "Higher productivity in short runs",
+            "Digital services with a technical focus"
+          ]
+        },
+        {
+          tag: "School or studio",
+          title: "I want to teach and experiment with a digital layer",
+          text: "The platform supports classes, exercises and demonstrations with chatbot help, tutorials and examples that bring innovation into the classroom.",
+          points: [
+            "More visual and interactive learning",
+            "Resources for community and education",
+            "A bridge between tradition and new technologies"
           ]
         }
       ]
     },
     cta: {
       eyebrow: "AlfarerIA",
-      title: "A brand that can sell pieces, deliver services and grow as a platform.",
-      text: "The physical collection still matters, but it is now part of a broader system: participatory design, automation, tools for ceramicists and more sustainable processes.",
+      title: "A proposal that brings together object, digital service and shared knowledge.",
+      text: "The physical collection still matters, but it now belongs to a wider system: co-design with customers, tools for ceramicists, training, automation and more mindful production.",
       button: "Explore the full concept"
     },
     footer: [
@@ -678,6 +762,7 @@ function applyLanguage(lang) {
 
   if (ui.canvasEyebrow) ui.canvasEyebrow.textContent = t.canvas.eyebrow;
   if (ui.canvasTitle) ui.canvasTitle.textContent = t.canvas.title;
+  if (ui.canvasNote) ui.canvasNote.textContent = t.canvas.note;
   ui.canvasCards.forEach((card, index) => {
     const content = t.canvas.cards[index];
     if (!content) return;
@@ -723,6 +808,7 @@ function applyLanguage(lang) {
 
   if (ui.processEyebrow) ui.processEyebrow.textContent = t.process.eyebrow;
   if (ui.processTitle) ui.processTitle.textContent = t.process.title;
+  if (ui.processNote) ui.processNote.textContent = t.process.note;
   ui.processCards.forEach((card, index) => {
     card.querySelector("h3").textContent = t.process.cards[index].title;
     card.querySelector("p").textContent = t.process.cards[index].text;
@@ -738,6 +824,20 @@ function applyLanguage(lang) {
     card.querySelector("h3").textContent = content.title;
     card.querySelector("p").textContent = content.text;
     [...card.querySelectorAll(".feature-points li")].forEach((item, pointIndex) => {
+      item.textContent = content.points[pointIndex];
+    });
+  });
+
+  if (ui.useCasesEyebrow) ui.useCasesEyebrow.textContent = t.useCases.eyebrow;
+  if (ui.useCasesTitle) ui.useCasesTitle.textContent = t.useCases.title;
+  if (ui.useCasesNote) ui.useCasesNote.textContent = t.useCases.note;
+  ui.useCaseCards.forEach((card, index) => {
+    const content = t.useCases.cards[index];
+    if (!content) return;
+    card.querySelector(".use-case-tag").textContent = content.tag;
+    card.querySelector("h3").textContent = content.title;
+    card.querySelector("p").textContent = content.text;
+    [...card.querySelectorAll(".use-case-points li")].forEach((item, pointIndex) => {
       item.textContent = content.points[pointIndex];
     });
   });
