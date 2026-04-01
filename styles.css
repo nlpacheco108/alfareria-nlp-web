@@ -337,6 +337,8 @@ h3 {
 .hero-frame,
 .story-card,
 .collection-card,
+.canvas-card,
+.feature-card,
 .gallery-spotlight,
 .process-card,
 .cta-card {
@@ -469,6 +471,43 @@ h3 {
   color: var(--ink-soft);
   font-size: 0.92rem;
   font-weight: 700;
+}
+
+.canvas-grid,
+.feature-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.canvas-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.canvas-card,
+.feature-card {
+  display: grid;
+  gap: 16px;
+  padding: 26px;
+}
+
+.canvas-tag,
+.feature-tag {
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(28, 86, 109, 0.08);
+  color: var(--sea-deep);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.canvas-card p,
+.feature-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.65;
 }
 
 .collections-grid {
@@ -645,7 +684,7 @@ h3 {
 
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
@@ -664,6 +703,25 @@ h3 {
   background: linear-gradient(135deg, rgba(241, 179, 143, 0.32), rgba(140, 196, 199, 0.28));
   color: var(--sea-night);
   font-weight: 800;
+}
+
+.feature-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.feature-points {
+  display: grid;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.feature-points li {
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--ink-soft);
 }
 
 .cta-card {
@@ -704,8 +762,10 @@ h3 {
   .story-layout,
   .gallery-layout,
   .section-heading.split,
+  .canvas-grid,
   .collections-grid,
-  .process-grid {
+  .process-grid,
+  .feature-grid {
     grid-template-columns: 1fr;
   }
 
