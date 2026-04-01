@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AlfarerIA | Alfarería, IA e impresión 3D</title>
+  <title>AlfarerIA | Landing</title>
   <meta
     name="description"
-    content="AlfarerIA combina alfarería tradicional, inteligencia artificial, impresión 3D y una plataforma digital para personalizar piezas y optimizar la producción cerámica."
+    content="AlfarerIA une alfarería tradicional, inteligencia artificial e impresión 3D en una experiencia digital con páginas separadas para proceso, plataforma y colección."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,22 +16,22 @@
   >
   <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
+<body data-page="home">
   <div class="page-shell">
     <header class="topbar">
-      <a class="brand" href="#inicio" aria-label="Ir al inicio de AlfarerIA">
+      <a class="brand" href="./index.html" aria-label="Ir al inicio de AlfarerIA">
         <span class="brand-mark">A</span>
-          <span class="brand-copy">
+        <span class="brand-copy">
           <strong>AlfarerIA</strong>
           <span>Alfarería tradicional, IA, impresión 3D y plataforma digital</span>
         </span>
       </a>
 
       <nav class="nav" aria-label="Principal">
-        <a href="#modelo">Propuesta</a>
-        <a href="#proceso">Proceso</a>
-        <a href="#plataforma">Plataforma</a>
-        <a href="#coleccion-destacada">Colección</a>
+        <a data-nav="home" href="./index.html">Inicio</a>
+        <a data-nav="process" href="./proceso.html">Proceso</a>
+        <a data-nav="platform" href="./plataforma.html">Plataforma</a>
+        <a data-nav="collection" href="./coleccion.html">Colección</a>
       </nav>
 
       <div class="nav-actions">
@@ -39,477 +39,123 @@
           <button class="lang-toggle active" type="button" data-lang="es" aria-pressed="true">ES</button>
           <button class="lang-toggle" type="button" data-lang="en" aria-pressed="false">EN</button>
         </div>
-        <a class="nav-cta" href="#plataforma">Ver funcionalidades</a>
+        <a class="nav-cta" href="./plataforma.html">Probar la plataforma</a>
       </div>
     </header>
 
     <main>
-      <section class="hero section" id="inicio">
+      <section class="hero section landing-hero">
         <div class="hero-copy">
-          <p class="eyebrow">Del barro al código</p>
-          <h1>Artesanía, IA e impresión 3D para una cerámica más precisa, personalizable y sostenible.</h1>
-          <p class="hero-intro">
-            AlfarerIA combina alfarería tradicional con inteligencia artificial, impresión 3D y una
-            plataforma digital para reducir errores en producción, personalizar piezas y escalar el
-            negocio más allá de la venta física.
+          <p class="eyebrow" id="hero-eyebrow">Del barro al código</p>
+          <h1 id="hero-title">Cerámica artesanal con una capa digital pensada para diseñar, producir y aprender mejor.</h1>
+          <p class="hero-intro" id="hero-intro">
+            AlfarerIA presenta una forma más clara de entender el proyecto: una landing limpia y tres
+            páginas específicas donde se exploran el proceso, la plataforma y la colección.
           </p>
 
           <div class="hero-actions">
-            <a class="button primary" href="#plataforma">Explorar funcionalidades</a>
-            <a class="button secondary" href="#proceso">Ver proceso</a>
+            <a class="button primary" id="hero-primary" href="./plataforma.html">Ver demos</a>
+            <a class="button secondary" id="hero-secondary" href="./proceso.html">Descubrir el proceso</a>
           </div>
 
           <ul class="hero-highlights" aria-label="Valores de la marca">
-            <li>Predicción de contracción en horno</li>
-            <li>Optimización de esmaltes y materiales</li>
-            <li>Moldes y herramientas impresas en 3D</li>
-            <li>Web automatizada y chatbot para clientes</li>
+            <li id="highlight-1">Diseño participativo con IA</li>
+            <li id="highlight-2">Producción más precisa</li>
+            <li id="highlight-3">Moldes y útiles impresos en 3D</li>
+            <li id="highlight-4">Tutoriales, soporte y comunidad</li>
           </ul>
         </div>
 
-        <div class="hero-stage">
+        <div class="hero-stage hero-stage-simple">
           <article class="hero-frame">
             <img
+              id="hero-image"
               src="./assets/la-concha-artistica.png"
               alt="Taza cerámica inspirada en La Concha al atardecer"
             >
           </article>
+        </div>
+      </section>
 
-          <article class="hero-note hero-note-top">
-            <span class="note-label">Modelo híbrido</span>
-            <strong>Producto + servicio + plataforma</strong>
-            <p>Diseño asistido por IA, producción artesanal y herramientas digitales para escalar.</p>
+      <section class="section">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow" id="routes-eyebrow">Recorrido web</p>
+            <h2 id="routes-title">La experiencia se divide en páginas claras, cada una con una función distinta.</h2>
+          </div>
+          <p class="section-note" id="routes-note">
+            En lugar de apilar toda la información en una sola pantalla, la web separa lo esencial en
+            rutas más lógicas y más fáciles de explorar.
+          </p>
+        </div>
+
+        <div class="route-grid">
+          <a class="route-card" href="./proceso.html">
+            <span class="route-tag" id="route-tag-1">Proceso</span>
+            <h3 id="route-title-1">Cómo pasa una idea del briefing al horno</h3>
+            <p id="route-text-1">Una página centrada en etapas, decisiones de taller y herramientas que apoyan cada fase.</p>
+          </a>
+
+          <a class="route-card" href="./plataforma.html">
+            <span class="route-tag" id="route-tag-2">Plataforma</span>
+            <h3 id="route-title-2">Demos sencillas que muestran funcionalidades reales</h3>
+            <p id="route-text-2">Configurador visual, cálculo de contracción y chatbot conceptual para enseñar el valor digital.</p>
+          </a>
+
+          <a class="route-card" href="./coleccion.html">
+            <span class="route-tag" id="route-tag-3">Colección</span>
+            <h3 id="route-title-3">La parte emocional y visual del proyecto</h3>
+            <p id="route-text-3">Una galería por colecciones para ver cómo la propuesta termina convertida en piezas concretas.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow" id="value-eyebrow">Qué aporta</p>
+          <h2 id="value-title">La mezcla de artesanía y tecnología se entiende mejor cuando cada capa tiene su propio espacio.</h2>
+        </div>
+
+        <div class="canvas-grid value-grid">
+          <article class="canvas-card">
+            <span class="canvas-tag" id="value-tag-1">Cliente</span>
+            <h3 id="value-card-title-1">Más claridad antes de encargar una pieza</h3>
+            <p id="value-card-text-1">La plataforma ayuda a describir una idea, verla antes y reducir malentendidos en el encargo.</p>
           </article>
 
-          <article class="hero-note hero-note-bottom">
-            <span class="note-label">Clientes</span>
-            <p>Aficionados, ceramistas profesionales y clientes finales con encargos personalizados.</p>
+          <article class="canvas-card">
+            <span class="canvas-tag" id="value-tag-2">Taller</span>
+            <h3 id="value-card-title-2">Más control técnico durante la producción</h3>
+            <p id="value-card-text-2">La IA y la impresión 3D se presentan como herramientas que apoyan decisiones reales de taller.</p>
+          </article>
+
+          <article class="canvas-card">
+            <span class="canvas-tag" id="value-tag-3">Comunidad</span>
+            <h3 id="value-card-title-3">Más recorrido después de la venta</h3>
+            <p id="value-card-text-3">El proyecto también abre espacio para formación, soporte, inspiración y servicios para otros perfiles.</p>
           </article>
         </div>
       </section>
 
-      <section class="story section" id="proyecto">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">El proyecto</p>
-            <h2>Un taller cerámico que también funciona como servicio digital.</h2>
-          </div>
-        </div>
-
+      <section class="section teaser-section">
         <div class="story-layout">
           <article class="story-card story-copy">
-            <p>
-              La propuesta evolucionó desde la venta de piezas físicas hacia un modelo más escalable:
-              además de producir cerámica, AlfarerIA puede ofrecer herramientas basadas en IA para
-              otros ceramistas, automatizar la atención al cliente y abrir una capa de diseño
-              participativo para pedidos personalizados.
+            <p class="eyebrow" id="teaser-eyebrow">Pieza destacada</p>
+            <h2 id="teaser-title">La Concha Sunset Series sigue siendo la puerta de entrada emocional.</h2>
+            <p id="teaser-text-1">
+              La colección resume bien el espíritu de AlfarerIA: paisaje, memoria, objeto cotidiano y
+              una estética que mezcla sensibilidad artesanal con imaginario generado digitalmente.
             </p>
-            <p>
-              La impresión 3D acelera moldes, útiles y prototipos. La IA predice contracción, sugiere
-              mezclas, optimiza el uso de materiales y ayuda a generar diseños únicos. Juntas, ambas
-              tecnologías mejoran productividad, sostenibilidad y personalización sin perder el valor
-              artesanal.
+            <p id="teaser-text-2">
+              En la página de colección puedes cambiar entre líneas, imágenes y descripciones para ver
+              cómo se organiza el catálogo de una forma más rica y más limpia.
             </p>
+            <a class="button primary" id="teaser-button" href="./coleccion.html">Explorar colección</a>
           </article>
 
-          <aside class="story-card story-quote">
-            <p class="quote-mark">"</p>
-            <p class="quote-copy">
-              El cliente participa en el diseño. AlfarerIA se encarga de convertirlo en pieza real.
-            </p>
-            <span class="quote-signoff">Visión del modelo</span>
-          </aside>
-        </div>
-      </section>
-
-      <section class="canvas section" id="modelo">
-        <div class="section-heading split">
-          <div>
-            <p class="eyebrow">La propuesta</p>
-            <h2>Una marca artesanal que también opera como plataforma creativa y técnica.</h2>
-          </div>
-          <p class="section-note">
-            AlfarerIA no se limita a vender piezas: conecta diseño participativo, producción
-            inteligente, formación y herramientas digitales en una experiencia más escalable.
-          </p>
-        </div>
-
-        <div class="canvas-grid">
-          <article class="canvas-card">
-            <span class="canvas-tag">Experiencia</span>
-            <h3>El cliente participa desde el primer boceto</h3>
-            <p>La web permite describir una idea, subir imágenes de referencia o conversar con un asistente para transformar inspiración en una propuesta visual clara.</p>
+          <article class="story-card image-card">
+            <img src="./assets/la-concha-mar.png" alt="Taza de la colección La Concha Sunset Series sobre el mar">
           </article>
-
-          <article class="canvas-card">
-            <span class="canvas-tag">Producción</span>
-            <h3>Tecnología para decidir mejor antes de fabricar</h3>
-            <p>La IA ayuda a anticipar contracción, documentar esmaltes y optimizar materiales, mientras la impresión 3D acelera moldes, útiles y prototipos.</p>
-          </article>
-
-          <article class="canvas-card">
-            <span class="canvas-tag">Servicios</span>
-            <h3>Herramientas que también pueden ayudar a otros ceramistas</h3>
-            <p>Más allá de la venta final, el proyecto abre la puerta a asistentes técnicos, recursos de laboratorio y soluciones digitales para talleres, escuelas y profesionales.</p>
-          </article>
-
-          <article class="canvas-card">
-            <span class="canvas-tag">Comunidad</span>
-            <h3>Contenido, soporte y aprendizaje continuo</h3>
-            <p>La parte digital también acompaña después de la compra o del encargo, con tutoriales, comunidad, automatizaciones y una relación más cercana con cada perfil de usuario.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="collections section" id="colecciones">
-        <div class="section-heading">
-          <p class="eyebrow">Líneas de producto</p>
-          <h2>La colección física sigue siendo el escaparate tangible del modelo.</h2>
-        </div>
-
-        <div class="collections-grid">
-          <article class="collection-card">
-            <div class="collection-icon cats">Andalucía</div>
-            <h3>Andalucía</h3>
-            <p>
-              Piezas inspiradas en la identidad andaluza: luz cálida, cal, patios, sierra y mar,
-              convertidos en objetos cotidianos con alma.
-            </p>
-            <ul class="collection-points">
-              <li>Paleta luminosa y mediterránea</li>
-              <li>Referencias al sur, su paisaje y su memoria</li>
-              <li>Carácter cercano, artesanal y sereno</li>
-            </ul>
-          </article>
-
-          <article class="collection-card">
-            <div class="collection-icon sea">Mar</div>
-            <h3>Mar</h3>
-            <p>
-              Una línea inspirada en espuma, sal, reflejos turquesa y horizontes en calma. Ideal
-              para piezas limpias, frescas y muy luminosas.
-            </p>
-            <ul class="collection-points">
-              <li>Paleta turquesa, arena y espuma</li>
-              <li>Texturas de orilla y agua en movimiento</li>
-              <li>Estética serena para uso diario</li>
-            </ul>
-          </article>
-
-          <article class="collection-card featured" id="coleccion-destacada">
-            <div class="collection-badge">Colección destacada</div>
-            <h3>La Concha Sunset Series</h3>
-            <p class="featured-slogan">Cada taza, un atardecer.</p>
-            <p>
-              La serie nace de un prompt visual muy concreto: una taza hecha en torno y esmaltada con
-              un paisaje inspirado en La Concha, el mar color esmeralda y un cielo que se mueve entre
-              azul, rosa y naranja.
-            </p>
-
-            <div class="series-content">
-              <article class="series-piece">
-                <h4>La Concha Clásica</h4>
-                <p>
-                  La silueta más icónica de Marbella, capturada cuando el sol besa la cima y lo cambia
-                  todo.
-                </p>
-                <blockquote>Hay lugares que no se explican, se sienten.</blockquote>
-              </article>
-
-              <article class="series-piece">
-                <h4>Atardecer en la Bahía</h4>
-                <p>
-                  Una versión más tranquila, con mar en calma, cielo degradado y una presencia suave
-                  de la montaña al fondo.
-                </p>
-                <blockquote>No todos los días son intensos. Algunos son solo bonitos.</blockquote>
-              </article>
-
-              <article class="series-piece">
-                <h4>Mar Esmeralda</h4>
-                <p>
-                  Verde-azul intenso, brillo mediterráneo y una sensación muy clara de verano que se
-                  resiste a terminar.
-                </p>
-                <blockquote>Un pedacito de verano que no se acaba.</blockquote>
-              </article>
-
-              <article class="series-piece">
-                <h4>Pinceladas de Marbella</h4>
-                <p>
-                  Una lectura más artística y emocional, como si el recuerdo estuviera pintado
-                  directamente sobre la cerámica.
-                </p>
-                <blockquote>Marbella, pero sentida.</blockquote>
-              </article>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="gallery section" id="galeria">
-        <div class="section-heading split">
-          <div>
-            <p class="eyebrow">Colección física</p>
-            <h2>Un ejemplo de cómo el sistema digital termina convertido en pieza real.</h2>
-          </div>
-          <p class="section-note">
-            Pulsa en cada miniatura para cambiar la pieza protagonista y ver diferentes acabados,
-            referencias y niveles de detalle.
-          </p>
-        </div>
-
-        <div class="gallery-layout">
-          <article class="gallery-spotlight">
-            <img
-              id="spotlight-image"
-              src="./assets/la-concha-artistica.png"
-              alt="Pieza destacada de AlfarerIA"
-            >
-            <div class="spotlight-copy">
-              <span class="spotlight-kicker" id="spotlight-kicker">Interpretación pictórica</span>
-              <h3 id="spotlight-title">Pinceladas de Marbella</h3>
-              <p id="spotlight-text">
-                Una pieza más libre, con textura de recuerdo pintado y una mirada casi ilustrada
-                sobre la costa.
-              </p>
-            </div>
-          </article>
-
-          <div class="gallery-thumbs" aria-label="Selector de piezas">
-            <button
-              class="thumb-button"
-              type="button"
-              data-key="bahia"
-            >
-              <img src="./assets/la-concha-bahia.png" alt="Vista de Atardecer en la bahía">
-            </button>
-
-            <button
-              class="thumb-button"
-              type="button"
-              data-key="torno"
-            >
-              <img src="./assets/la-concha-torno.png" alt="Taza en torno inspirada en La Concha">
-            </button>
-
-            <button
-              class="thumb-button"
-              type="button"
-              data-key="mar"
-            >
-              <img src="./assets/la-concha-mar.png" alt="Taza con mar esmeralda y La Concha">
-            </button>
-
-            <button
-              class="thumb-button"
-              type="button"
-              data-key="costa"
-            >
-              <img src="./assets/la-concha-costa.png" alt="Taza con vista de la costa de Marbella">
-            </button>
-
-            <button
-              class="thumb-button active"
-              type="button"
-              data-key="artistica"
-            >
-              <img src="./assets/la-concha-artistica.png" alt="Pieza artística inspirada en Marbella">
-            </button>
-          </div>
-        </div>
-      </section>
-
-      <section class="process section" id="proceso">
-        <div class="section-heading split">
-          <div>
-            <p class="eyebrow">Proceso creativo</p>
-            <h2>Del briefing al horno, con IA y fabricación digital acompañando cada fase.</h2>
-          </div>
-          <p class="section-note">
-            Cada etapa combina una decisión artesanal con una capa tecnológica concreta para reducir
-            errores, acelerar iteraciones y mantener la pieza final bajo control.
-          </p>
-        </div>
-
-        <div class="process-grid">
-          <article class="process-card">
-            <span>01</span>
-            <h3>Brief del cliente</h3>
-            <p>El usuario sube una imagen, describe lo que quiere o conversa con el chatbot para definir forma, estilo y uso de la pieza.</p>
-          </article>
-
-          <article class="process-card">
-            <span>02</span>
-            <h3>Prototipo visual con IA</h3>
-            <p>Un generador visual crea propuestas del resultado final para que el cliente participe activamente en el diseño.</p>
-          </article>
-
-          <article class="process-card">
-            <span>03</span>
-            <h3>Predicción de contracción</h3>
-            <p>La IA estima cómo se comportará la pieza en secado y cocción para reducir fallos y ajustar medidas antes de fabricar.</p>
-          </article>
-
-          <article class="process-card">
-            <span>04</span>
-            <h3>Laboratorio de esmaltes</h3>
-            <p>Se prueban recetas, acabados y compatibilidades con ayuda de modelos que optimizan color, textura y resultado esperado.</p>
-          </article>
-
-          <article class="process-card">
-            <span>05</span>
-            <h3>Moldes y útiles impresos en 3D</h3>
-            <p>La impresión 3D permite producir moldes, soportes y herramientas con rapidez para series cortas y personalización a mayor escala.</p>
-          </article>
-
-          <article class="process-card">
-            <span>06</span>
-            <h3>Producción, reciclaje y entrega</h3>
-            <p>Se optimiza el uso de pastas y esmaltes, se reduce el desperdicio y la pieza terminada vuelve al cliente con trazabilidad digital.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="platform section" id="plataforma">
-        <div class="section-heading split">
-          <div>
-            <p class="eyebrow">Plataforma digital</p>
-            <h2>Funcionalidades ejemplo para convertir la idea en producto, servicio y plataforma.</h2>
-          </div>
-          <p class="section-note">
-            Estas piezas de interfaz ayudan a imaginar cómo AlfarerIA podría atender a clientes
-            finales, profesionales y comunidad desde un mismo entorno digital.
-          </p>
-        </div>
-
-        <div class="feature-grid">
-          <article class="feature-card">
-            <span class="feature-tag">Self-service</span>
-            <h3>Configurador visual con IA</h3>
-            <p>Un espacio para subir una imagen, describir una pieza o mezclar referencias y recibir propuestas visuales antes de pasar al taller.</p>
-            <ul class="feature-points">
-              <li>Entrada por imagen, texto o estilo</li>
-              <li>Versiones alternativas en segundos</li>
-              <li>Validación visual antes de producir</li>
-            </ul>
-          </article>
-
-          <article class="feature-card">
-            <span class="feature-tag">Asistencia</span>
-            <h3>Chatbot de co-creación y soporte</h3>
-            <p>El usuario puede conversar con un asistente para aterrizar una idea, resolver dudas de compra o recibir orientación técnica según su perfil.</p>
-            <ul class="feature-points">
-              <li>Brief guiado paso a paso</li>
-              <li>Soporte para aficionados y profesionales</li>
-              <li>Atención automatizada y continua</li>
-            </ul>
-          </article>
-
-          <article class="feature-card">
-            <span class="feature-tag">IA aplicada</span>
-            <h3>Predictor de contracción</h3>
-            <p>Una herramienta técnica para estimar deformaciones y ajustar medidas según pasta, espesor y curva de cocción antes de fabricar.</p>
-            <ul class="feature-points">
-              <li>Menos errores en horno</li>
-              <li>Mejor ajuste dimensional</li>
-              <li>Valor útil también como servicio</li>
-            </ul>
-          </article>
-
-          <article class="feature-card">
-            <span class="feature-tag">I+D cerámico</span>
-            <h3>Biblioteca viva de esmaltes</h3>
-            <p>Un sistema para registrar pruebas, comparar resultados y sugerir ajustes en color, textura o compatibilidad entre materiales.</p>
-            <ul class="feature-points">
-              <li>Historial de recetas y resultados</li>
-              <li>Aprendizaje acumulado del taller</li>
-              <li>Menos ensayo ciego y menos desperdicio</li>
-            </ul>
-          </article>
-
-          <article class="feature-card">
-            <span class="feature-tag">Fabricación digital</span>
-            <h3>Centro 3D para moldes y útiles</h3>
-            <p>Zona pensada para generar moldes, soportes y prototipos con rapidez, facilitando producción bajo demanda y personalización repetible.</p>
-            <ul class="feature-points">
-              <li>Series cortas más viables</li>
-              <li>Herramientas precisas para el taller</li>
-              <li>Puente entre artesanía y fabricación digital</li>
-            </ul>
-          </article>
-
-          <article class="feature-card">
-            <span class="feature-tag">Comunidad</span>
-            <h3>Aula, comunidad y servicios pro</h3>
-            <p>Una capa educativa con tutoriales, soporte, recursos para escuelas y servicios avanzados para ceramistas que necesitan más acompañamiento.</p>
-            <ul class="feature-points">
-              <li>Formación para perfiles distintos</li>
-              <li>Comunidad digital alrededor del proyecto</li>
-              <li>Servicios premium y relación a largo plazo</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="use-cases section" id="casos">
-        <div class="section-heading split">
-          <div>
-            <p class="eyebrow">Escenarios de uso</p>
-            <h2>Tres maneras de vivir AlfarerIA según quién entra en la plataforma.</h2>
-          </div>
-          <p class="section-note">
-            La misma infraestructura puede servir para un encargo emocional, una necesidad técnica o
-            una experiencia educativa más completa.
-          </p>
-        </div>
-
-        <div class="use-cases-grid">
-          <article class="use-case-card">
-            <span class="use-case-tag">Cliente final</span>
-            <h3>Quiero una pieza única para mí o para regalar</h3>
-            <p>Subo una imagen, explico el ambiente que busco y veo un prototipo visual antes de aprobar la producción artesanal.</p>
-            <ul class="use-case-points">
-              <li>Diseño participativo sin conocimientos técnicos</li>
-              <li>Seguimiento más claro del encargo</li>
-              <li>Resultado personalizado y emocional</li>
-            </ul>
-          </article>
-
-          <article class="use-case-card">
-            <span class="use-case-tag">Profesional</span>
-            <h3>Necesito herramientas para producir con más control</h3>
-            <p>Utilizo predicción, documentación de esmaltes y recursos 3D para reducir pruebas fallidas y repetir series con mayor consistencia.</p>
-            <ul class="use-case-points">
-              <li>Datos útiles para decisiones de taller</li>
-              <li>Más productividad en series cortas</li>
-              <li>Servicios digitales con enfoque técnico</li>
-            </ul>
-          </article>
-
-          <article class="use-case-card">
-            <span class="use-case-tag">Escuela o taller</span>
-            <h3>Quiero enseñar y experimentar con una capa digital</h3>
-            <p>La plataforma acompaña clases, ejercicios y demostraciones con chatbot, tutoriales y ejemplos que acercan la innovación al aula.</p>
-            <ul class="use-case-points">
-              <li>Formación más visual e interactiva</li>
-              <li>Recursos para comunidad y aprendizaje</li>
-              <li>Puente entre tradición y nuevas tecnologías</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="cta section">
-        <div class="cta-card">
-          <p class="eyebrow">AlfarerIA</p>
-          <h2>Una propuesta que une objeto, servicio digital y conocimiento compartido.</h2>
-          <p>
-            La colección física sigue siendo importante, pero ahora forma parte de un sistema más
-            amplio: co-diseño con clientes, herramientas para ceramistas, formación, automatización y
-            una producción más consciente.
-          </p>
-          <a class="button primary" href="#casos">Explorar el concepto completo</a>
         </div>
       </section>
     </main>

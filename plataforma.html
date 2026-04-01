@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlfarerIA | Plataforma</title>
+  <meta
+    name="description"
+    content="Plataforma digital de AlfarerIA con demos de configurador visual, cálculo de contracción y chatbot de co-creación."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-page="platform">
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="./index.html" aria-label="Ir al inicio de AlfarerIA">
+        <span class="brand-mark">A</span>
+        <span class="brand-copy">
+          <strong>AlfarerIA</strong>
+          <span>Alfarería tradicional, IA, impresión 3D y plataforma digital</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <a data-nav="home" href="./index.html">Inicio</a>
+        <a data-nav="process" href="./proceso.html">Proceso</a>
+        <a data-nav="platform" href="./plataforma.html">Plataforma</a>
+        <a data-nav="collection" href="./coleccion.html">Colección</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-switch" aria-label="Selector de idioma">
+          <button class="lang-toggle active" type="button" data-lang="es" aria-pressed="true">ES</button>
+          <button class="lang-toggle" type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="nav-cta" href="./coleccion.html">Ver colección</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero section">
+        <div class="page-hero-copy">
+          <p class="eyebrow" id="page-eyebrow">Plataforma</p>
+          <h1 id="page-title">Aquí la parte digital deja de ser un concepto y empieza a comportarse como producto.</h1>
+          <p class="hero-intro" id="page-intro">
+            Esta página reúne pequeños prototipos para mostrar cómo podrían sentirse algunas
+            funcionalidades de AlfarerIA.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow" id="platform-eyebrow">Demostraciones</p>
+            <h2 id="platform-title">Tres ejemplos sencillos para enseñar diseño asistido, apoyo técnico y atención guiada.</h2>
+          </div>
+          <p class="section-note" id="platform-note">
+            No son herramientas finales, pero sí ayudan a visualizar el tipo de producto digital que podría acompañar al taller.
+          </p>
+        </div>
+
+        <div class="tool-stack">
+          <article class="tool-shell two-column-shell">
+            <div class="tool-panel">
+              <span class="tool-tag" id="tool-tag-1">Configurador</span>
+              <h3 id="tool-title-1">Genera un concepto de pieza a partir de una idea</h3>
+              <label class="control-group">
+                <span id="config-label-idea">Describe la pieza</span>
+                <textarea id="idea-input" rows="5">Taza inspirada en La Concha, con tonos marinos y sensación de atardecer tranquilo.</textarea>
+              </label>
+              <div class="control-grid">
+                <label class="control-group">
+                  <span id="config-label-mood">Ambiente</span>
+                  <select id="mood-select">
+                    <option value="serene">Sereno</option>
+                    <option value="bold">Intenso</option>
+                    <option value="warm">Cálido</option>
+                  </select>
+                </label>
+                <label class="control-group">
+                  <span id="config-label-audience">Perfil</span>
+                  <select id="audience-select">
+                    <option value="client">Cliente final</option>
+                    <option value="pro">Ceramista profesional</option>
+                    <option value="school">Escuela o taller</option>
+                  </select>
+                </label>
+              </div>
+              <button class="button primary" id="generate-button" type="button">Generar propuesta</button>
+            </div>
+
+            <article class="output-card">
+              <span class="output-kicker" id="config-kicker">Propuesta IA</span>
+              <h3 id="config-title">Taza Costa Serena</h3>
+              <p id="config-text">Una pieza de líneas suaves, paisaje costero y acabado luminoso pensada para uso diario y fuerte carga emocional.</p>
+              <div class="palette-row" id="palette-row">
+                <span class="palette-chip">Turquesa suave</span>
+                <span class="palette-chip">Arena clara</span>
+                <span class="palette-chip">Coral tenue</span>
+              </div>
+            </article>
+          </article>
+
+          <article class="tool-shell two-column-shell">
+            <div class="tool-panel">
+              <span class="tool-tag" id="tool-tag-2">Cálculo</span>
+              <h3 id="tool-title-2">Simula la contracción de una pieza antes de fabricarla</h3>
+              <div class="control-grid">
+                <label class="control-group">
+                  <span id="calc-label-diameter">Diámetro inicial (cm)</span>
+                  <input id="diameter-input" type="number" value="9.5" step="0.1" min="1">
+                </label>
+                <label class="control-group">
+                  <span id="calc-label-height">Altura inicial (cm)</span>
+                  <input id="height-input" type="number" value="10.8" step="0.1" min="1">
+                </label>
+                <label class="control-group">
+                  <span id="calc-label-shrinkage">Contracción estimada (%)</span>
+                  <input id="shrinkage-input" type="number" value="12" step="0.1" min="0" max="40">
+                </label>
+              </div>
+            </div>
+
+            <article class="output-card calc-output">
+              <span class="output-kicker" id="calc-kicker">Resultado estimado</span>
+              <div class="calc-results">
+                <div class="calc-result-box">
+                  <strong id="diameter-result">8.36 cm</strong>
+                  <span id="diameter-result-label">Diámetro final</span>
+                </div>
+                <div class="calc-result-box">
+                  <strong id="height-result">9.50 cm</strong>
+                  <span id="height-result-label">Altura final</span>
+                </div>
+                <div class="calc-result-box">
+                  <strong id="loss-result">12.0%</strong>
+                  <span id="loss-result-label">Merma aplicada</span>
+                </div>
+              </div>
+              <p id="calc-text">Este cálculo ilustra cómo la IA puede ayudar a ajustar medidas antes de pasar a producción.</p>
+            </article>
+          </article>
+
+          <article class="tool-shell two-column-shell">
+            <div class="tool-panel">
+              <span class="tool-tag" id="tool-tag-3">Chatbot</span>
+              <h3 id="tool-title-3">Prueba tres preguntas típicas de cliente o comunidad</h3>
+              <div class="prompt-chips">
+                <button class="prompt-chip active" type="button" data-reply="gift">Quiero un regalo</button>
+                <button class="prompt-chip" type="button" data-reply="glaze">Necesito ayuda con esmaltes</button>
+                <button class="prompt-chip" type="button" data-reply="classroom">Busco una demo para clase</button>
+              </div>
+            </div>
+
+            <article class="output-card chat-output">
+              <span class="output-kicker" id="chat-kicker">Respuesta guiada</span>
+              <p class="chat-user" id="chat-user">Quiero un regalo</p>
+              <p class="chat-assistant" id="chat-assistant">Puedo ayudarte a diseñar una pieza personalizada a partir de una foto, un lugar o una emoción. Empezaríamos por el estilo, la paleta y el uso de la pieza.</p>
+            </article>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow" id="feature-eyebrow">Capas del producto</p>
+          <h2 id="feature-title">La plataforma no sirve solo para vender: también ordena, acompaña y enseña.</h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-tag" id="feature-tag-1">Self-service</span>
+            <h3 id="feature-card-title-1">Reduce fricción en los encargos</h3>
+            <p id="feature-card-text-1">El cliente llega con más claridad al taller porque ha podido describir, visualizar y acotar lo que quiere.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-tag" id="feature-tag-2">Soporte técnico</span>
+            <h3 id="feature-card-title-2">Aporta criterio antes de gastar tiempo y material</h3>
+            <p id="feature-card-text-2">Las herramientas digitales ayudan a decidir medidas, pruebas y recursos antes de entrar en fases costosas.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-tag" id="feature-tag-3">Comunidad</span>
+            <h3 id="feature-card-title-3">Abre una segunda línea de valor</h3>
+            <p id="feature-card-text-3">Tutoriales, demos y servicios para profesionales amplían el proyecto más allá de la venta de piezas.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta section">
+        <div class="cta-card">
+          <p class="eyebrow" id="cta-eyebrow">Siguiente paso</p>
+          <h2 id="cta-title">Después de entender la plataforma, toca volver al objeto y a la colección.</h2>
+          <p id="cta-text">
+            La página de colección convierte todo esto en piezas, series y relatos visuales más concretos.
+          </p>
+          <a class="button primary" id="cta-button" href="./coleccion.html">Ir a la colección</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Piezas hechas a mano, una a una.</p>
+      <p>Para que el sur, su luz, sus mares y sus montañas te acompañen cada día.</p>
+      <p>AlfarerIA</p>
+    </footer>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

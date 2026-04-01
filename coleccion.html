@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlfarerIA | Colección</title>
+  <meta
+    name="description"
+    content="Colecciones de AlfarerIA: Andalucía, Mar y La Concha Sunset Series en una galería interactiva con cambio de piezas."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-page="collection">
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="./index.html" aria-label="Ir al inicio de AlfarerIA">
+        <span class="brand-mark">A</span>
+        <span class="brand-copy">
+          <strong>AlfarerIA</strong>
+          <span>Alfarería tradicional, IA, impresión 3D y plataforma digital</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <a data-nav="home" href="./index.html">Inicio</a>
+        <a data-nav="process" href="./proceso.html">Proceso</a>
+        <a data-nav="platform" href="./plataforma.html">Plataforma</a>
+        <a data-nav="collection" href="./coleccion.html">Colección</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-switch" aria-label="Selector de idioma">
+          <button class="lang-toggle active" type="button" data-lang="es" aria-pressed="true">ES</button>
+          <button class="lang-toggle" type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="nav-cta" href="./plataforma.html">Ver plataforma</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero section">
+        <div class="page-hero-copy">
+          <p class="eyebrow" id="page-eyebrow">Colección</p>
+          <h1 id="page-title">El catálogo muestra cómo la idea digital termina convertida en piezas con carácter propio.</h1>
+          <p class="hero-intro" id="page-intro">
+            Aquí la web funciona como un pequeño catálogo interactivo, con cambio de colección y de
+            pieza protagonista.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow" id="collections-eyebrow">Colecciones</p>
+            <h2 id="collections-title">Cambia de línea para ver cómo varían la inspiración, el tono y el resultado visual.</h2>
+          </div>
+          <p class="section-note" id="collections-note">
+            Cada colección puede tener su propia narrativa, su propia paleta y su propia forma de presentarse.
+          </p>
+        </div>
+
+        <div class="collection-tabs">
+          <button class="collection-tab active" type="button" data-collection="andalucia">Andalucía</button>
+          <button class="collection-tab" type="button" data-collection="mar">Mar</button>
+          <button class="collection-tab" type="button" data-collection="concha">La Concha Sunset Series</button>
+        </div>
+
+        <div class="gallery-layout collection-layout">
+          <article class="story-card collection-summary">
+            <span class="collection-badge" id="collection-badge">Colección</span>
+            <h2 id="collection-title">Andalucía</h2>
+            <p id="collection-description">
+              Una línea de piezas inspirada en la luz del sur, la cal, el paisaje serrano y el mar como memoria cotidiana.
+            </p>
+            <ul class="collection-points" id="collection-points">
+              <li>Paleta cálida y mediterránea</li>
+              <li>Piezas con identidad andaluza</li>
+              <li>Equilibrio entre cercanía y paisaje</li>
+            </ul>
+          </article>
+
+          <article class="gallery-spotlight">
+            <img id="collection-spotlight-image" src="./assets/la-concha-artistica.png" alt="Pieza principal de la colección Andalucía">
+            <div class="spotlight-copy">
+              <span class="spotlight-kicker" id="collection-spotlight-kicker">Pieza protagonista</span>
+              <h3 id="collection-spotlight-title">Pinceladas del Sur</h3>
+              <p id="collection-spotlight-text">Una interpretación pictórica pensada para llevar paisaje y luz a un objeto de uso diario.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="gallery-thumbs collection-thumbs" aria-label="Selector de piezas">
+          <button class="thumb-button active" type="button" data-item="sur">
+            <img src="./assets/la-concha-artistica.png" alt="Pieza artística inspirada en el sur">
+          </button>
+          <button class="thumb-button" type="button" data-item="bahia">
+            <img src="./assets/la-concha-bahia.png" alt="Pieza inspirada en una bahía mediterránea">
+          </button>
+          <button class="thumb-button" type="button" data-item="costa">
+            <img src="./assets/la-concha-costa.png" alt="Pieza con costa tranquila">
+          </button>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow" id="series-eyebrow">Lectura del catálogo</p>
+          <h2 id="series-title">La página también puede ordenar piezas por emoción, paisaje o uso.</h2>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-tag" id="series-tag-1">Narrativa</span>
+            <h3 id="series-card-title-1">Cada línea tiene una voz propia</h3>
+            <p id="series-card-text-1">La colección puede hablar desde el paisaje, el recuerdo, la costa o un imaginario más técnico.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-tag" id="series-tag-2">Catálogo</span>
+            <h3 id="series-card-title-2">Una misma pieza puede mostrarse de varias maneras</h3>
+            <p id="series-card-text-2">Galería, pieza protagonista y cambio de colección ayudan a presentar mejor el producto.</p>
+          </article>
+
+          <article class="feature-card">
+            <span class="feature-tag" id="series-tag-3">Conversión</span>
+            <h3 id="series-card-title-3">Lo visual también ayuda a vender mejor</h3>
+            <p id="series-card-text-3">Una colección bien explicada transmite intención, calidad y una experiencia más memorable.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta section">
+        <div class="cta-card">
+          <p class="eyebrow" id="cta-eyebrow">Volver al sistema</p>
+          <h2 id="cta-title">La colección emociona, pero la plataforma explica cómo se llega hasta ella.</h2>
+          <p id="cta-text">
+            Si quieres volver a la parte funcional, la página de plataforma enseña la capa digital que sostiene la experiencia.
+          </p>
+          <a class="button primary" id="cta-button" href="./plataforma.html">Abrir plataforma</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Piezas hechas a mano, una a una.</p>
+      <p>Para que el sur, su luz, sus mares y sus montañas te acompañen cada día.</p>
+      <p>AlfarerIA</p>
+    </footer>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

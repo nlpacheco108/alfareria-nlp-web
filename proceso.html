@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AlfarerIA | Proceso</title>
+  <meta
+    name="description"
+    content="Proceso creativo de AlfarerIA: del briefing al horno con apoyo de inteligencia artificial, impresión 3D y decisiones artesanales."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body data-page="process">
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="./index.html" aria-label="Ir al inicio de AlfarerIA">
+        <span class="brand-mark">A</span>
+        <span class="brand-copy">
+          <strong>AlfarerIA</strong>
+          <span>Alfarería tradicional, IA, impresión 3D y plataforma digital</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <a data-nav="home" href="./index.html">Inicio</a>
+        <a data-nav="process" href="./proceso.html">Proceso</a>
+        <a data-nav="platform" href="./plataforma.html">Plataforma</a>
+        <a data-nav="collection" href="./coleccion.html">Colección</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="lang-switch" aria-label="Selector de idioma">
+          <button class="lang-toggle active" type="button" data-lang="es" aria-pressed="true">ES</button>
+          <button class="lang-toggle" type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="nav-cta" href="./plataforma.html">Probar la plataforma</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero section">
+        <div class="page-hero-copy">
+          <p class="eyebrow" id="page-eyebrow">Proceso</p>
+          <h1 id="page-title">Cada pieza nace de una conversación, pasa por una validación digital y termina en un gesto artesanal.</h1>
+          <p class="hero-intro" id="page-intro">
+            Esta página explica cómo se reparte el trabajo entre cliente, plataforma, inteligencia
+            artificial, impresión 3D y taller cerámico.
+          </p>
+        </div>
+      </section>
+
+      <section class="process section">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow" id="timeline-eyebrow">Etapas</p>
+            <h2 id="timeline-title">Seis momentos donde la tecnología acompaña, pero no sustituye, la mano del taller.</h2>
+          </div>
+          <p class="section-note" id="timeline-note">
+            El objetivo no es automatizarlo todo, sino decidir mejor antes, durante y después de la producción.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-card">
+            <span>01</span>
+            <h3 id="process-card-title-1">Brief del cliente</h3>
+            <p id="process-card-text-1">El encargo empieza con una necesidad, una imagen o una emoción que se traduce a un briefing usable.</p>
+          </article>
+
+          <article class="process-card">
+            <span>02</span>
+            <h3 id="process-card-title-2">Prototipo visual</h3>
+            <p id="process-card-text-2">La IA genera una vista previa para que la conversación sea más clara antes de fabricar.</p>
+          </article>
+
+          <article class="process-card">
+            <span>03</span>
+            <h3 id="process-card-title-3">Decisión técnica</h3>
+            <p id="process-card-text-3">Se revisan forma, medidas, contracción y viabilidad según la pieza deseada.</p>
+          </article>
+
+          <article class="process-card">
+            <span>04</span>
+            <h3 id="process-card-title-4">Laboratorio</h3>
+            <p id="process-card-text-4">Los esmaltes, las pruebas y los acabados se documentan para aprender en cada iteración.</p>
+          </article>
+
+          <article class="process-card">
+            <span>05</span>
+            <h3 id="process-card-title-5">Apoyo 3D</h3>
+            <p id="process-card-text-5">Moldes, soportes y prototipos permiten trabajar con más precisión y menos ensayo ciego.</p>
+          </article>
+
+          <article class="process-card">
+            <span>06</span>
+            <h3 id="process-card-title-6">Producción y entrega</h3>
+            <p id="process-card-text-6">La pieza final vuelve al cliente con mejor trazabilidad y con un uso más consciente de materiales.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow" id="explorer-eyebrow">Explorador</p>
+            <h2 id="explorer-title">Pulsa una fase para ver qué ocurre realmente en cada tramo del proceso.</h2>
+          </div>
+          <p class="section-note" id="explorer-note">
+            Este panel resume qué aporta la plataforma y qué sigue dependiendo del criterio artesanal.
+          </p>
+        </div>
+
+        <div class="tool-shell stage-shell">
+          <div class="stage-tabs">
+            <button class="stage-tab active" type="button" data-stage="brief">Brief</button>
+            <button class="stage-tab" type="button" data-stage="prototype">Prototipo</button>
+            <button class="stage-tab" type="button" data-stage="shrinkage">Contracción</button>
+            <button class="stage-tab" type="button" data-stage="glaze">Esmaltes</button>
+            <button class="stage-tab" type="button" data-stage="printing">Impresión 3D</button>
+            <button class="stage-tab" type="button" data-stage="delivery">Entrega</button>
+          </div>
+
+          <article class="output-card stage-output">
+            <span class="output-kicker" id="stage-kicker">Fase 01</span>
+            <h3 id="stage-title">Del deseo del cliente a un brief útil</h3>
+            <p id="stage-text">Se recogen referencias visuales, uso previsto, tamaño aproximado y tono estético para evitar ambigüedades desde el inicio.</p>
+            <ul class="output-list" id="stage-points">
+              <li>La plataforma organiza el encargo</li>
+              <li>El chatbot puede hacer preguntas guía</li>
+              <li>El taller valida qué es viable</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-heading">
+          <p class="eyebrow" id="cycle-eyebrow">Ciclo de trabajo</p>
+          <h2 id="cycle-title">La mejora del proceso también pasa por documentar, reutilizar y aprender del taller.</h2>
+        </div>
+
+        <div class="canvas-grid value-grid">
+          <article class="canvas-card">
+            <span class="canvas-tag" id="cycle-tag-1">Materiales</span>
+            <h3 id="cycle-card-title-1">Menos desperdicio</h3>
+            <p id="cycle-card-text-1">Registrar consumos y sobrantes ayuda a reciclar mejor y a estimar futuras producciones.</p>
+          </article>
+
+          <article class="canvas-card">
+            <span class="canvas-tag" id="cycle-tag-2">Conocimiento</span>
+            <h3 id="cycle-card-title-2">Más memoria técnica</h3>
+            <p id="cycle-card-text-2">Cada prueba de esmalte y cada resultado quedan mejor documentados para no empezar de cero.</p>
+          </article>
+
+          <article class="canvas-card">
+            <span class="canvas-tag" id="cycle-tag-3">Escalabilidad</span>
+            <h3 id="cycle-card-title-3">Más capacidad de repetir con criterio</h3>
+            <p id="cycle-card-text-3">La producción sigue siendo artesanal, pero gana estructura para atender más casos sin perder calidad.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta section">
+        <div class="cta-card">
+          <p class="eyebrow" id="cta-eyebrow">Siguiente paso</p>
+          <h2 id="cta-title">Después del proceso, la siguiente capa lógica es ver la plataforma en acción.</h2>
+          <p id="cta-text">
+            La página de plataforma aterriza la parte digital con demos pequeñas que enseñan cómo se
+            sentiría el producto.
+          </p>
+          <a class="button primary" id="cta-button" href="./plataforma.html">Abrir plataforma</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Piezas hechas a mano, una a una.</p>
+      <p>Para que el sur, su luz, sus mares y sus montañas te acompañen cada día.</p>
+      <p>AlfarerIA</p>
+    </footer>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
