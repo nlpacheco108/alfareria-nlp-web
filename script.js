@@ -81,7 +81,7 @@ const pageTranslations = {
         cards: [
           {
             tag: "Proceso",
-            title: "Cómo pasa una idea del briefing al horno",
+            title: "Cómo pasa una idea de la definición del producto deseado al horno",
             text: "Una página centrada en etapas, decisiones de taller y herramientas que apoyan cada fase."
           },
           {
@@ -202,7 +202,7 @@ const pageTranslations = {
   process: {
     es: {
       title: "AlfarerIA | Proceso",
-      description: "Proceso creativo de AlfarerIA: del briefing al horno con apoyo de inteligencia artificial, impresión 3D y decisiones artesanales.",
+      description: "Proceso creativo de AlfarerIA: de la definición del producto deseado al horno con apoyo de inteligencia artificial, impresión 3D y decisiones artesanales.",
       navCta: "Probar la plataforma",
       hero: {
         eyebrow: "Proceso",
@@ -214,7 +214,7 @@ const pageTranslations = {
         title: "Seis momentos donde la tecnología acompaña, pero no sustituye, la mano del taller.",
         note: "El objetivo no es automatizarlo todo, sino decidir mejor antes, durante y después de la producción.",
         cards: [
-          ["Brief del cliente", "El encargo empieza con una necesidad, una imagen o una emoción que se traduce a un briefing usable."],
+          ["Definición del producto deseado", "El encargo empieza con una necesidad, una imagen o una emoción que se traduce a una definición clara y usable."],
           ["Prototipo visual", "La IA genera una vista previa para que la conversación sea más clara antes de fabricar."],
           ["Decisión técnica", "Se revisan forma, medidas, contracción y viabilidad según la pieza deseada."],
           ["Laboratorio", "Los esmaltes, las pruebas y los acabados se documentan para aprender en cada iteración."],
@@ -245,7 +245,7 @@ const pageTranslations = {
     },
     en: {
       title: "AlfarerIA | Process",
-      description: "Creative process at AlfarerIA: from briefing to kiln with support from artificial intelligence, 3D printing and handmade decisions.",
+      description: "Creative process at AlfarerIA: from the desired product definition to the kiln with support from artificial intelligence, 3D printing and handmade decisions.",
       navCta: "Try the platform",
       hero: {
         eyebrow: "Process",
@@ -257,7 +257,7 @@ const pageTranslations = {
         title: "Six moments where technology supports the workshop hand instead of replacing it.",
         note: "The goal is not to automate everything, but to make better decisions before, during and after production.",
         cards: [
-          ["Client brief", "A request begins with a need, an image or an emotion that is translated into a usable brief."],
+          ["Desired product definition", "A request begins with a need, an image or an emotion that is translated into a clear and usable definition."],
           ["Visual prototype", "AI generates a first preview so the conversation becomes clearer before production starts."],
           ["Technical decision", "Form, dimensions, shrinkage and viability are reviewed according to the intended piece."],
           ["Lab work", "Glazes, tests and finishes are documented so every iteration teaches something."],
@@ -484,9 +484,9 @@ const pageTranslations = {
 const processStageData = {
   es: {
     brief: {
-      label: "Brief",
+      label: "Definición del producto deseado",
       kicker: "Fase 01",
-      title: "Del deseo del cliente a un brief útil",
+      title: "Del deseo del cliente a una definición útil",
       text: "Se recogen referencias visuales, uso previsto, tamaño aproximado y tono estético para evitar ambigüedades desde el inicio.",
       points: [
         "La plataforma organiza el encargo",
@@ -552,9 +552,9 @@ const processStageData = {
   },
   en: {
     brief: {
-      label: "Brief",
+      label: "Desired product definition",
       kicker: "Stage 01",
-      title: "From the customer's desire to a useful brief",
+      title: "From the customer's desire to a useful definition",
       text: "Visual references, intended use, approximate size and aesthetic tone are gathered to avoid ambiguity from the beginning.",
       points: [
         "The platform organizes the commission",
@@ -632,7 +632,7 @@ const chatbotReplies = {
     },
     classroom: {
       user: "Busco una demo para clase",
-      assistant: "La plataforma puede servir para enseñar cómo una idea pasa del briefing al prototipo, cómo se estima la contracción y cómo se documentan las pruebas del taller."
+      assistant: "La plataforma puede servir para enseñar cómo una idea pasa de la definición del producto deseado al prototipo, cómo se estima la contracción y cómo se documentan las pruebas del taller."
     }
   },
   en: {
@@ -646,7 +646,7 @@ const chatbotReplies = {
     },
     classroom: {
       user: "I need a classroom demo",
-      assistant: "The platform can help teach how an idea moves from briefing to prototype, how shrinkage is estimated and how workshop tests are documented."
+      assistant: "The platform can help teach how an idea moves from the desired product definition to the prototype, how shrinkage is estimated and how workshop tests are documented."
     }
   }
 };
