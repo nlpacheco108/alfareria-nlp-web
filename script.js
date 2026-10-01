@@ -8,7 +8,7 @@ const footerLines = [...document.querySelectorAll(".footer p")];
 const metaDescription = document.querySelector('meta[name="description"]');
 
 const state = {
-  language: localStorage.getItem("alfareria_lang") || "es",
+  language: (() => { try { return localStorage.getItem("alfareria_lang") || "es"; } catch { return "es"; } })(),
   processStage: "brief",
   chatbotReply: "gift",
   collection: "andalucia",
@@ -1117,18 +1117,27 @@ function renderConfigurator(language) {
 }
 
 function renderCalculator(language) {
-  const diameter = Number(el("diameter-input")?.value || 0);
-  const height = Number(el("height-input")?.value || 0);
-  const shrinkage = Number(el("shrinkage-input")?.value || 0);
-  const factor = Math.max(0, 1 - shrinkage / 100);
-  const format = (value) => `${value.toFixed(2)} cm`;
-  setText("diameter-result", format(diameter * factor));
-  setText("height-result", format(height * factor));
+  const inputs = [el("diameter-input"), el("height-input"), el("shrinkage-input")];
+  const valid = inputs.every(input => input && input.value !== "" && input.checkValidity());
+  inputs.forEach(input => input?.setAttribute("aria-invalid", String(!input.value || !input.checkValidity())));
+  if (!valid) {
+    ["diameter-result", "height-result", "loss-result"].forEach(id => setText(id, "—"));
+    setText("calc-text", language === "es" ? "Introduce medidas positivas y una contracción entre 0 y 40 %." : "Enter positive dimensions and shrinkage between 0 and 40%.");
+    return;
+  }
+  const [diameter, height, shrinkage] = inputs.map(input => Number(input.value));
+  const factor = 1 - shrinkage / 100;
+  const reverse = el("size-direction")?.value === "reverse";
+  const format = value => `${value.toLocaleString(language, {minimumFractionDigits: 2, maximumFractionDigits: 2})} cm`;
+  setText("diameter-result", format(reverse ? diameter / factor : diameter * factor));
+  setText("height-result", format(reverse ? height / factor : height * factor));
+  setText("diameter-result-label", language === "es" ? (reverse ? "Diámetro a modelar" : "Diámetro final") : (reverse ? "Forming diameter" : "Final diameter"));
+  setText("height-result-label", language === "es" ? (reverse ? "Altura a modelar" : "Altura final") : (reverse ? "Forming height" : "Final height"));
   setText("loss-result", `${shrinkage.toFixed(1)}%`);
   if (language === "es") {
-    setText("calc-text", "Este cálculo ilustra cómo la IA puede ayudar a ajustar medidas antes de pasar a producción.");
+    setText("calc-text", "Cálculo geométrico, no predicción IA. Usa la contracción total medida en una probeta de tu pasta y cocción. Se supone contracción uniforme.");
   } else {
-    setText("calc-text", "This calculation illustrates how AI could help adjust dimensions before production starts.");
+    setText("calc-text", "Geometric calculation, not an AI prediction. Use total shrinkage measured on a test bar of your clay and firing. Uniform shrinkage is assumed.");
   }
 }
 
@@ -1187,13 +1196,14 @@ function renderCollectionDisplay(language) {
 function applyLanguage(language) {
   const safeLanguage = commonTranslations[language] ? language : "es";
   state.language = safeLanguage;
-  localStorage.setItem("alfareria_lang", safeLanguage);
+  try { localStorage.setItem("alfareria_lang", safeLanguage); } catch { /* Language still works without storage. */ }
   setHTMLLang(safeLanguage);
 
   if (page === "home") renderHome(safeLanguage);
   if (page === "process") renderProcess(safeLanguage);
   if (page === "platform") renderPlatform(safeLanguage);
   if (page === "collection") renderCollection(safeLanguage);
+  if (typeof renderStudio === "function") renderStudio();
 }
 
 document.addEventListener("click", (event) => {
